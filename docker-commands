@@ -1,0 +1,7 @@
+docker build --tag retail-test-app .
+docker run --publish 8002:8002 retail-test-app
+
+
+docker save retail-test-app > retail-test-app.tar
+docker run -it retail-test-app /bin/bash
+docker system prune -a
